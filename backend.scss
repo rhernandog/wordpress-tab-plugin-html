@@ -1,0 +1,90 @@
+@import 'scss/foundation';
+
+@include foundation-global-styles();
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+
+p {
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.main-container {
+	padding: 15px 0;
+	@include grid-row;
+	
+	.inner-wrap {
+		padding: 0 10px;
+		@include clearfix;
+		@include breakpoint(medium) {
+			padding: 0 15px;
+		}
+
+		> .config-left-column,
+		> .config-right-column {
+			padding-left: 0;
+			padding-right: 0;
+		}// config left/right end
+
+	}// inner wrap end
+
+}// main container end
+
+.inner-content {
+	@include grid-column(12);
+}
+
+.config-left-column,
+.config-right-column {
+	@include grid-column(12);
+}
+
+.config-left-column {
+	height: 48px;
+	overflow-y: hidden;
+	border: 1px solid $tab-content-border;
+	@include breakpoint(medium) {
+		height: 350px;
+		overflow-y: auto;
+		@include grid-column(4);
+	}
+
+	.tab-id-list {
+		@include breakpoint(medium) {
+			min-height: 352px;
+		}
+		@include tabs-container;
+		@include tabs-container-vertical;
+	}
+
+	.tab-id-element {
+		@include tabs-title;
+	}
+}// config-left-column end
+
+.config-right-column {
+	height: auto;
+	@include breakpoint(medium) {
+		height: 350px;
+		@include grid-column(8);
+	}
+
+	.tab-content-wrap {
+		@include tabs-content;
+		@include tabs-content-vertical;
+		// add left border for smaller screens
+		border-left: 1px solid #e6e6e6;
+		@include breakpoint(medium) {
+			border-left:0;
+			border-top: 1px solid #e6e6e6;
+		}
+
+		.tab-content-container {
+			height: auto;
+			@include breakpoint(medium) {
+				height: 350px;
+			}
+			@include tabs-panel;
+		}
+	}
+}// config-right-column end
