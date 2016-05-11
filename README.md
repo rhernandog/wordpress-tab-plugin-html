@@ -1,4 +1,4 @@
-# wordpress-tab-plugin-html
+# Custom Wordpress Tab plugin html samples
 HTML and CSS tests for the front and back end of my custom wordpress tabs plugin
 
 ### Description
