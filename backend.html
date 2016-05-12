@@ -32,16 +32,37 @@
       <div class="inner-wrap">
         <!-- left column start -->
         <div class="config-left-column column-element">
-          <ul class="tab-id-list">
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
-            <li class="tab-id-element"><a>Lorem ipsum</a></li>
+          <ul class="tab-id-list" id="tab-id-list">
+            <li class="tab-id-element is-active" role="presentation">
+              <a class="tab-id-link" href="tab-content-panel-1" aria-selected="true" aria-controls="tab-content-panel-1" id="tab-content-panel-1-link">
+                Lorem ipsum
+              </a>
+            </li>
+            <li class="tab-id-element" role="presentation">
+              <a class="tab-id-link" href="tab-content-panel-2" aria-selected="false" aria-controls="tab-content-panel-2" id="tab-content-panel-2-link">
+                Lorem ipsum
+              </a>
+            </li>
+            <li class="tab-id-element" role="presentation">
+              <a class="tab-id-link" href="tab-content-panel-3" aria-selected="false" aria-controls="tab-content-panel-3" id="tab-content-panel-3-link">
+                Lorem ipsum
+              </a>
+            </li>
+            <li class="tab-id-element" role="presentation">
+              <a class="tab-id-link" href="tab-content-panel-4" aria-selected="false" aria-controls="tab-content-panel-4" id="tab-content-panel-4-link">
+                Lorem ipsum
+              </a>
+            </li>
+            <li class="tab-id-element" role="presentation">
+              <a class="tab-id-link" href="tab-content-panel-5" aria-selected="false" aria-controls="tab-content-panel-5" id="tab-content-panel-5-link">
+                Lorem ipsum
+              </a>
+            </li>
+            <li class="tab-id-element" role="presentation">
+              <a class="tab-id-link" href="tab-content-panel-6" aria-selected="false" aria-controls="tab-content-panel-6" id="tab-content-panel-6-link">
+                Lorem ipsum
+              </a>
+            </li>
           </ul>
         </div>
         <!-- left column end // -->
@@ -50,23 +71,23 @@
         <div class="config-right-column column-element">
           
           <!-- content wrap start --> 
-          <div class="tab-content-wrap">
-            <div class="tab-content-container is-active">
+          <div class="tab-content-wrap" id="tab-content-wrap">
+            <div class="tab-content-container is-active" id="tab-content-panel-1" role="tabpanel" aria-hidden="false" aria-labeledby="tab-content-panel-1-link">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum totam ut magnam cumque, mollitia possimus quidem, aperiam facilis quas amet maxime ipsum quisquam omnis optio impedit fugit labore tenetur libero.</p>
             </div>
-            <div class="tab-content-container">
+            <div class="tab-content-container" id="tab-content-panel-2" role="tabpanel" aria-hidden="true" aria-labeledby="tab-content-panel-2-link">
               <p>Sit consectetur vel aspernatur quos facilis, voluptatibus doloribus, soluta. Atque excepturi officiis quam molestiae ducimus iste quas distinctio, sequi voluptate tenetur delectus, nam nostrum eaque porro maxime quis doloremque non.</p>
             </div>
-            <div class="tab-content-container">
+            <div class="tab-content-container" id="tab-content-panel-3" role="tabpanel" aria-hidden="true" aria-labeledby="tab-content-panel-3-link">
               <p>Eius unde doloremque veniam voluptas, recusandae quasi amet illo maxime molestiae obcaecati reiciendis eveniet consequuntur eaque commodi voluptatibus error beatae. Voluptate, minus beatae dolorum optio totam mollitia suscipit quae tempora?</p>
             </div>
-            <div class="tab-content-container">
+            <div class="tab-content-container" id="tab-content-panel-4" role="tabpanel" aria-hidden="true" aria-labeledby="tab-content-panel-4-link">
               <p>Accusamus ea deserunt perspiciatis vel debitis beatae unde temporibus! Impedit culpa voluptatem sapiente a accusantium, odio dignissimos suscipit vel rem, atque iusto mollitia saepe! Modi sed sint illum magnam, autem.</p>
             </div>
-            <div class="tab-content-container">
+            <div class="tab-content-container" id="tab-content-panel-5" role="tabpanel" aria-hidden="true" aria-labeledby="tab-content-panel-5-link">
               <p>Rem possimus ullam corrupti architecto aspernatur natus voluptatum illo quasi cupiditate ab ipsam assumenda, quibusdam eaque esse officiis atque? Id, reiciendis doloribus esse optio quos praesentium est! Quod, maxime, debitis?</p>
             </div>
-            <div class="tab-content-container">
+            <div class="tab-content-container" id="tab-content-panel-6" role="tabpanel" aria-hidden="true" aria-labeledby="tab-content-panel-6-link">
               <p>Alias magnam aliquam id illo, consequuntur corporis voluptas maxime ipsa. Quam consectetur possimus corporis dolorum nemo autem ipsum modi impedit et quasi qui beatae, doloribus iure porro ab esse sequi?</p>
             </div>
           </div>
@@ -77,6 +98,10 @@
       </div>
 
     </div>
+  
+
+    <script src="jquery-1.12.3.min.js"></script>
+    <script src="backend.js"></script>
 
 
   </body>
