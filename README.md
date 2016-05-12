@@ -7,3 +7,4 @@ The CSS files are created using SASS and Compass using Foundation's mixins in or
 
 ### Dependencies
 * Foundation for sites 6.2.1
+* jQuery 1.12.3
