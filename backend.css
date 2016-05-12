@@ -1363,7 +1363,7 @@ p {
     @media screen and (min-width: 48em) {
       /* line 52, backend.scss */
       .config-left-column .tab-id-list {
-        min-height: 352px; } }
+        min-height: 348px; } }
     /* line 138, scss/util/_mixins.scss */
     .config-left-column .tab-id-list::before, .config-left-column .tab-id-list::after {
       content: ' ';
@@ -1434,7 +1434,7 @@ p {
       @media screen and (min-width: 48em) {
         /* line 82, backend.scss */
         .config-right-column .tab-content-wrap .tab-content-container {
-          height: 350px; } }
+          height: 348px; } }
       /* line 113, scss/components/_tabs.scss */
       .config-right-column .tab-content-wrap .tab-content-container.is-active {
         display: block; }

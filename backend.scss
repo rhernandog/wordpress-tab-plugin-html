@@ -51,7 +51,7 @@ p {
 
 	.tab-id-list {
 		@include breakpoint(medium) {
-			min-height: 352px;
+			min-height: 348px;
 		}
 		@include tabs-container;
 		@include tabs-container-vertical;
@@ -82,7 +82,7 @@ p {
 		.tab-content-container {
 			height: auto;
 			@include breakpoint(medium) {
-				height: 350px;
+				height: 348px;
 			}
 			@include tabs-panel;
 		}
