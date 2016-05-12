@@ -8,3 +8,4 @@ The CSS files are created using SASS and Compass using Foundation's mixins in or
 ### Dependencies
 * Foundation for sites 6.2.1
 * jQuery 1.12.3
+* SASS and Compass in order to edit the CSS files using the scss files as a starting point. The final CSS files can be edited individually as well.

@@ -1334,9 +1334,10 @@ p {
 
 /* line 42, backend.scss */
 .config-left-column {
+  border: 1px solid #e6e6e6;
   height: 48px;
   overflow-y: hidden;
-  border: 1px solid #e6e6e6; }
+  transition: all 0.5s ease; }
   @media screen and (min-width: 48em) {
     /* line 42, backend.scss */
     .config-left-column {
@@ -1355,15 +1356,21 @@ p {
       /* line 82, scss/grid/_column.scss */
       .config-left-column:last-child:not(:first-child) {
         float: right; } }
-  /* line 52, backend.scss */
+  /* line 53, backend.scss */
   .config-left-column .tab-id-list {
     margin: 0;
     list-style-type: none;
-    background: #fefefe; }
+    background: #fefefe;
+    margin-top: -48px;
+    opacity: 0; }
     @media screen and (min-width: 48em) {
-      /* line 52, backend.scss */
+      /* line 53, backend.scss */
       .config-left-column .tab-id-list {
-        min-height: 348px; } }
+        margin-top: 0;
+        min-height: 348px;
+        position: relative;
+        opacity: 1;
+        z-index: 10; } }
     /* line 138, scss/util/_mixins.scss */
     .config-left-column .tab-id-list::before, .config-left-column .tab-id-list::after {
       content: ' ';
@@ -1376,27 +1383,43 @@ p {
       width: auto;
       float: none;
       display: block; }
-  /* line 60, backend.scss */
-  .config-left-column .tab-id-element {
-    float: left; }
+  /* line 67, backend.scss */
+  .config-left-column .tab-id-element,
+  .config-left-column .current-active-link {
+    float: left;
+    float: none; }
     /* line 77, scss/components/_tabs.scss */
-    .config-left-column .tab-id-element > a {
+    .config-left-column .tab-id-element > a,
+    .config-left-column .current-active-link > a {
       display: block;
       padding: 1rem;
       line-height: 1;
       font-size: 1rem; }
       /* line 83, scss/components/_tabs.scss */
-      .config-left-column .tab-id-element > a:hover {
+      .config-left-column .tab-id-element > a:hover,
+      .config-left-column .current-active-link > a:hover {
         background: #f2f2f2; }
       /* line 87, scss/components/_tabs.scss */
-      .config-left-column .tab-id-element > a:focus, .config-left-column .tab-id-element > a[aria-selected='true'] {
+      .config-left-column .tab-id-element > a:focus, .config-left-column .tab-id-element > a[aria-selected='true'],
+      .config-left-column .current-active-link > a:focus,
+      .config-left-column .current-active-link > a[aria-selected='true'] {
         background: #e6e6e6; }
+  /* line 73, backend.scss */
+  .config-left-column .current-active-link {
+    background: #e6e6e6;
+    display: block;
+    position: relative;
+    z-index: 50; }
+    @media screen and (min-width: 48em) {
+      /* line 73, backend.scss */
+      .config-left-column .current-active-link {
+        display: none; } }
 
-/* line 65, backend.scss */
+/* line 84, backend.scss */
 .config-right-column {
   height: auto; }
   @media screen and (min-width: 48em) {
-    /* line 65, backend.scss */
+    /* line 84, backend.scss */
     .config-right-column {
       height: 350px;
       width: 66.66667%;
@@ -1404,7 +1427,7 @@ p {
       padding-left: 0.625rem;
       padding-right: 0.625rem; } }
   @media screen and (min-width: 48em) and (min-width: 48em) {
-    /* line 65, backend.scss */
+    /* line 84, backend.scss */
     .config-right-column {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
@@ -1412,7 +1435,7 @@ p {
       /* line 82, scss/grid/_column.scss */
       .config-right-column:last-child:not(:first-child) {
         float: right; } }
-  /* line 72, backend.scss */
+  /* line 91, backend.scss */
   .config-right-column .tab-content-wrap {
     background: #fefefe;
     transition: all 0.5s ease;
@@ -1422,17 +1445,17 @@ p {
     border-left: 0;
     border-left: 1px solid #e6e6e6; }
     @media screen and (min-width: 48em) {
-      /* line 72, backend.scss */
+      /* line 91, backend.scss */
       .config-right-column .tab-content-wrap {
         border-left: 0;
         border-top: 1px solid #e6e6e6; } }
-    /* line 82, backend.scss */
+    /* line 101, backend.scss */
     .config-right-column .tab-content-wrap .tab-content-container {
       height: auto;
       display: none;
       padding: 1rem; }
       @media screen and (min-width: 48em) {
-        /* line 82, backend.scss */
+        /* line 101, backend.scss */
         .config-right-column .tab-content-wrap .tab-content-container {
           height: 348px; } }
       /* line 113, scss/components/_tabs.scss */

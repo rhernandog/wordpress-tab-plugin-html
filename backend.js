@@ -12,7 +12,7 @@
 (function($){$(function(){
 
 	// variables
-	var tabIdList, tabIdElements, activeElement, tabIdLinks, selectedLink, tabContentWrap, tabContentContainer, currentContainer;
+	var tabIdList, tabIdElements, activeElement, tabIdLinks, selectedLink, tabContentWrap, tabContentContainer, currentContainer, activeLinkDisplay, currentActiveLink, configLeftColumn, $window, screenWidth;
 
 	// list id elements & links
 	tabIdList = $("#tab-id-list");
@@ -25,6 +25,60 @@
 	tabContentWrap = $("#tab-content-wrap");
 	tabContentContainer = $(".tab-content-container");
 	currentContainer = $(".tab-content-container.is-active");
+
+	// active link element display for small screens
+	currentActiveLink = $("#current-active-link");
+	activeLinkDisplay = $("#active-link-display");
+
+	// get the screen width to know if the active link display should be hidden or not
+	$window = $(window);
+	screenWidth = $window.width();
+
+	// config left column for the acitve link display click
+	configLeftColumn = $("#config-left-column");
+
+	// set the initial state of the active link display for small screens
+	if( screenWidth < 768 ) {
+		activeLinkDisplay.attr("aria-hidden", false);
+	}
+
+	// set the screen  width when resizing
+	$window.on('resize', function(){
+
+		// set the screen width
+		screenWidth = $window.width();
+
+		// correct the scroll position of the left column, in case it has been scrolled down
+		if( screenWidth < 768 && configLeftColumn.scrollTop() > 0 ) {
+
+			// set the scroll to 0
+			configLeftColumn.css({'max-height':'none', 'height':'48px', 'overflow-y':'hidden'}).scrollTop(0);
+
+		} else if ( screenWidth >= 768 ) {
+
+			configLeftColumn.css({'max-height':'none', 'height':'350px', 'overflow-y':'auto'});
+
+		}// scroll conditional end
+
+	});// window resize end
+
+	// set the initial value of the current active link
+	currentActiveLink.html(selectedLink.html());
+
+	// when clicking the current active link in small screens, animate the height
+	// of the left column to show the tabs links and hide the active link display
+	currentActiveLink.on('click', function(e){
+
+		// hide the active link display
+		activeLinkDisplay.css({'opacity':0, 'visibility':'hidden'}).attr("aria-hidden", true);
+
+		// change the height of the left column
+		configLeftColumn.css({'max-height':'350px', 'height':'auto', 'overflow-y':'auto'});
+
+		// change the styles of the ids list
+		tabIdList.css('opacity',1);
+
+	});// active link click end
 
 	// tab links click event
 	tabIdLinks.on('click', function(e){
@@ -39,6 +93,18 @@
 		targetId = $self.attr("href");
 		targetTab = $("#"+targetId);
 
+		// check the screen width, if it's small screen reset the left column height,
+		// and reset the of the active link display
+		if( screenWidth < 768 ) {
+
+			// active link styles
+			activeLinkDisplay.css({'opacity':1, 'visibility':'visible'}).attr("aria-hidden", false);
+
+			// left column styles & the scroll value
+			configLeftColumn.css({'max-height':'none', 'height':'48px', 'overflow-y':'hidden'}).scrollTop(0);
+
+		}// screen width conditional end
+
 		// toggle the link selected attr
 		changeLinkSelected($self);
 
@@ -47,6 +113,9 @@
 
 		// toggle the visible target
 		toggleTargetClass(targetTab);
+
+		// change the text of the active link
+		currentActiveLink.html($self.html());
 
 	});// tab links click end
 

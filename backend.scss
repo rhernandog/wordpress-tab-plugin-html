@@ -40,9 +40,10 @@ p {
 }
 
 .config-left-column {
+	border: 1px solid $tab-content-border;
 	height: 48px;
 	overflow-y: hidden;
-	border: 1px solid $tab-content-border;
+	transition: all 0.5s ease;
 	@include breakpoint(medium) {
 		height: 350px;
 		overflow-y: auto;
@@ -51,14 +52,32 @@ p {
 
 	.tab-id-list {
 		@include breakpoint(medium) {
+			margin-top: 0;
 			min-height: 348px;
+			position: relative;
+			opacity: 1;
+			z-index: 10;
 		}
 		@include tabs-container;
 		@include tabs-container-vertical;
+		margin-top: -48px;
+		opacity: 0;
 	}
 
-	.tab-id-element {
+	.tab-id-element,
+	.current-active-link {
 		@include tabs-title;
+		float: none;
+	}
+
+	.current-active-link {
+		background: $tab-background-active;
+		display: block;
+		position: relative;
+		z-index: 50;
+		@include breakpoint(medium) {
+			display: none;
+		}
 	}
 }// config-left-column end
 
