@@ -1,3 +1,9 @@
+/*
+-----------------------------------------------------------------------------------
+			IMPORTS
+-----------------------------------------------------------------------------------
+*/
+
 @import 'scss/foundation';
 
 @include foundation-global-styles();
@@ -5,9 +11,26 @@
 @include foundation-forms;
 @include foundation-button;
 
-p {
-	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-}
+
+
+
+
+/*
+-----------------------------------------------------------------------------------
+			VARIABLES
+-----------------------------------------------------------------------------------
+*/
+$delete-btn-background: #dc3232;
+$delete-btn-background-hover: darken($delete-btn-background, 10%);
+
+
+
+
+
+
+// p {
+// 	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+// }
 
 .main-container {
 	padding: 15px 0;
@@ -44,14 +67,14 @@ p {
 	height: 48px;
 	overflow-y: hidden;
 	transition: all 0.5s ease;
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		height: 350px;
 		overflow-y: auto;
 		@include grid-column(4);
 	}
 
 	.tab-id-list {
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			margin-top: 0;
 			min-height: 348px;
 			position: relative;
@@ -75,7 +98,7 @@ p {
 		display: block;
 		position: relative;
 		z-index: 50;
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			display: none;
 		}
 	}
@@ -83,7 +106,7 @@ p {
 
 .config-right-column {
 	height: auto;
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		height: 350px;
 		@include grid-column(8);
 	}
@@ -93,17 +116,89 @@ p {
 		@include tabs-content-vertical;
 		// add left border for smaller screens
 		border-left: 1px solid #e6e6e6;
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			border-left:0;
 			border-top: 1px solid #e6e6e6;
 		}
 
 		.tab-content-container {
 			height: auto;
-			@include breakpoint(medium) {
+			@include breakpoint(large) {
 				height: 348px;
 			}
 			@include tabs-panel;
 		}
+
+		.tab-container-settings {
+			@include grid-row;
+			margin-bottom: 3px;
+			padding-bottom: 3px;
+			border-bottom: 1px solid $medium-gray;
+		}
+
+		.tab-settings-col {
+			@include grid-column(12);
+
+			.tab-name-label {
+				background-color: #0074a2;
+				color: #fff;
+				border: 1px solid $medium-gray;
+				border-right: none;
+				font-size: 14px;
+				margin-right: -1px;
+				padding: 3px 10px;
+
+				@media screen and (max-width: 782px) {
+					padding: 8px 10px;
+				}
+			}
+		}// tab settings col end
+
+		.left-setting {
+			@include breakpoint(xlarge) {
+				@include grid-column(4);
+			}
+		}
+
+		.right-setting {
+			@include breakpoint(xlarge) {
+				@include grid-column(8);
+			}
+		}
 	}
 }// config-right-column end
+
+// update buttons wrap
+.tab-update-btn-wrap {
+	@include grid-row;
+	border-bottom: 1px solid $medium-gray;
+
+	.buttons-container,
+	.post-selector-container {
+		@include grid-column(12);
+	}
+
+	.buttons-container {
+		@include breakpoint(xlarge) {
+			@include grid-column(4);
+			margin-top: 25px;
+		}
+	}
+
+	.post-selector-container {
+		@include breakpoint(xlarge) {
+			@include grid-column(8);
+		}
+	}
+}// update button wrap end
+
+// delete button - use button mixin
+.delete-button {
+	background-color: $delete-btn-background;
+	color: $white;
+	&:active,
+	&:hover,
+	&:focus {
+		background-color: $delete-btn-background-hover;
+	}
+}
