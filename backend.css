@@ -1911,3 +1911,14 @@ select[multiple] {
 .delete-button:active, .delete-button:hover, .delete-button:focus {
   background-color: #bb2020;
 }
+
+/* line 206, backend.scss */
+.tab-editor-wrap,
+.delete-tab-btn-wrap {
+  padding-top: 10px;
+}
+
+/* line 211, backend.scss */
+.input-group-label.help-icon {
+  cursor: pointer;
+}

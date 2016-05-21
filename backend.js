@@ -38,7 +38,7 @@
 	configLeftColumn = $("#config-left-column");
 
 	// set the initial state of the active link display for small screens
-	if( screenWidth < 768 ) {
+	if( screenWidth < 1024 ) {
 		activeLinkDisplay.attr("aria-hidden", false);
 	}
 
@@ -49,12 +49,16 @@
 		screenWidth = $window.width();
 
 		// correct the scroll position of the left column, in case it has been scrolled down
-		if( screenWidth < 768 && configLeftColumn.scrollTop() > 0 ) {
+		if( screenWidth < 1024 && configLeftColumn.scrollTop() > 0 ) {
 
 			// set the scroll to 0
 			configLeftColumn.css({'max-height':'none', 'height':'48px', 'overflow-y':'hidden'}).scrollTop(0);
 
-		} else if ( screenWidth >= 768 ) {
+		} else if( screenWidth < 1024 ){
+
+			configLeftColumn.css({'max-height':'none', 'height':'48px', 'overflow-y':'hidden'});
+
+		} else if ( screenWidth >= 1024 ) {
 
 			configLeftColumn.css({'max-height':'none', 'height':'350px', 'overflow-y':'auto'});
 
@@ -95,7 +99,7 @@
 
 		// check the screen width, if it's small screen reset the left column height,
 		// and reset the of the active link display
-		if( screenWidth < 768 ) {
+		if( screenWidth < 1024 ) {
 
 			// active link styles
 			activeLinkDisplay.css({'opacity':1, 'visibility':'visible'}).attr("aria-hidden", false);
