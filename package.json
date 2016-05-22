@@ -1,6 +1,6 @@
 {
   "name": "wordpress-tab-plugin-html-test",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "HTML and CSS tests for the back and front end of the Websnap Custom Tabs Wordpress plugin. Dependencies are all added into the GitHub repository",
   "main": "backend.js",
   "repository": {
