@@ -1,4 +1,6 @@
 # Custom Wordpress Tab plugin html samples
+[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/wordpress-tab-plugin-html-test)
+
 HTML and CSS tests for the front and back end of my custom wordpress tabs plugin
 
 ### Description
