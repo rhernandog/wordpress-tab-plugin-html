@@ -1,0 +1,540 @@
+/*	  
+ *	Websnap Custom Tabs Wordpress Plugin
+ *	Author				: Rodrigo Hernando
+ *	URI						: https://github.com/rhernandog/wordpress-tab-plugin-html
+ *	Version				: 1.1.0
+ *	License				: MIT
+ *	File Type			: Frontend HTML & CSS test SASS file
+ *	Dependencies	: jQuery 1.12.3
+ */
+/*
+-----------------------------------------------------------------------------------
+			IMPORTS
+-----------------------------------------------------------------------------------
+*/
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.1
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+/* line 221, scss/_global.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 231, scss/_global.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 245, scss/_global.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 289, scss/_global.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 301, scss/_global.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 310, scss/_global.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 322, scss/_global.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 330, scss/_global.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 339, scss/_global.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 348, scss/_global.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 357, scss/_global.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 366, scss/_global.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 374, scss/_global.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 382, scss/_global.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 386, scss/_global.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 397, scss/_global.scss */
+img {
+  border: 0;
+}
+
+/* line 120, scss/_global.scss */
+.foundation-mq {
+  font-family: "small=0em&medium=48em&large=64em&xlarge=75em&xxlarge=90em";
+}
+
+/* line 124, scss/_global.scss */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+/* line 130, scss/_global.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* line 137, scss/_global.scss */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0a0a0a;
+  background: #fefefe;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 152, scss/_global.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 164, scss/_global.scss */
+textarea {
+  height: auto;
+  min-height: 50px;
+  border-radius: 0;
+}
+
+/* line 171, scss/_global.scss */
+select {
+  width: 100%;
+  border-radius: 0;
+}
+
+/* line 181, scss/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object,
+.mqa-display img,
+.mqa-display embed,
+.mqa-display object {
+  max-width: none !important;
+}
+
+/* line 189, scss/_global.scss */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  line-height: 1;
+}
+/* line 169, scss/util/_mixins.scss */
+[data-whatinput='mouse'] button {
+  outline: 0;
+}
+
+/* line 201, scss/_global.scss */
+.is-visible {
+  display: block !important;
+}
+
+/* line 205, scss/_global.scss */
+.is-hidden {
+  display: none !important;
+}
+
+/* line 24, frontend.scss */
+.main-container {
+  padding: 15px 0;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 138, scss/util/_mixins.scss */
+.main-container::before, .main-container::after {
+  content: ' ';
+  display: table;
+}
+/* line 148, scss/util/_mixins.scss */
+.main-container::after {
+  clear: both;
+}
+/* line 28, frontend.scss */
+.main-container .inner-wrap {
+  padding: 0 10px;
+}
+/* line 138, scss/util/_mixins.scss */
+.main-container .inner-wrap::before, .main-container .inner-wrap::after {
+  content: ' ';
+  display: table;
+}
+/* line 148, scss/util/_mixins.scss */
+.main-container .inner-wrap::after {
+  clear: both;
+}
+@media screen and (min-width: 48em) {
+  /* line 28, frontend.scss */
+  .main-container .inner-wrap {
+    padding: 0 15px;
+  }
+}
+/* line 35, frontend.scss */
+.main-container .inner-wrap > .config-left-column,
+.main-container .inner-wrap > .config-right-column {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 45, frontend.scss */
+.inner-content {
+  width: 100%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+@media screen and (min-width: 48em) {
+  /* line 45, frontend.scss */
+  .inner-content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+/* line 82, scss/grid/_column.scss */
+.inner-content:last-child:not(:first-child) {
+  float: right;
+}
+
+/* line 49, frontend.scss */
+.config-left-column,
+.config-right-column {
+  width: 100%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+@media screen and (min-width: 48em) {
+  /* line 49, frontend.scss */
+  .config-left-column,
+  .config-right-column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+/* line 82, scss/grid/_column.scss */
+.config-left-column:last-child:not(:first-child),
+.config-right-column:last-child:not(:first-child) {
+  float: right;
+}
+
+/* line 54, frontend.scss */
+.config-left-column {
+  border: 1px solid #e6e6e6;
+  height: 48px;
+  overflow-y: hidden;
+  transition: all 0.5s ease;
+}
+@media screen and (min-width: 64em) {
+  /* line 54, frontend.scss */
+  .config-left-column {
+    height: 350px;
+    overflow-y: auto;
+    width: 33.33333%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+@media screen and (min-width: 64em) and (min-width: 48em) {
+  /* line 54, frontend.scss */
+  .config-left-column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 82, scss/grid/_column.scss */
+  .config-left-column:last-child:not(:first-child) {
+    float: right;
+  }
+}
+/* line 65, frontend.scss */
+.config-left-column .tab-id-list {
+  margin: 0;
+  list-style-type: none;
+  background: #fefefe;
+  margin-top: -48px;
+  opacity: 0;
+  padding: 0;
+}
+@media screen and (min-width: 64em) {
+  /* line 65, frontend.scss */
+  .config-left-column .tab-id-list {
+    margin-top: 0;
+    min-height: 348px;
+    position: relative;
+    opacity: 1;
+    z-index: 10;
+  }
+}
+/* line 138, scss/util/_mixins.scss */
+.config-left-column .tab-id-list::before, .config-left-column .tab-id-list::after {
+  content: ' ';
+  display: table;
+}
+/* line 148, scss/util/_mixins.scss */
+.config-left-column .tab-id-list::after {
+  clear: both;
+}
+/* line 66, scss/components/_tabs.scss */
+.config-left-column .tab-id-list > li {
+  width: auto;
+  float: none;
+  display: block;
+}
+/* line 80, frontend.scss */
+.config-left-column .tab-id-element,
+.config-left-column .current-active-link {
+  float: left;
+  float: none;
+}
+/* line 77, scss/components/_tabs.scss */
+.config-left-column .tab-id-element > a,
+.config-left-column .current-active-link > a {
+  display: block;
+  padding: 1rem;
+  line-height: 1;
+  font-size: 1rem;
+}
+/* line 83, scss/components/_tabs.scss */
+.config-left-column .tab-id-element > a:hover,
+.config-left-column .current-active-link > a:hover {
+  background: #f2f2f2;
+}
+/* line 87, scss/components/_tabs.scss */
+.config-left-column .tab-id-element > a:focus, .config-left-column .tab-id-element > a[aria-selected='true'],
+.config-left-column .current-active-link > a:focus,
+.config-left-column .current-active-link > a[aria-selected='true'] {
+  background: #e6e6e6;
+}
+/* line 86, frontend.scss */
+.config-left-column .tab-id-element a {
+  line-height: inherit;
+}
+/* line 90, frontend.scss */
+.config-left-column .tab-id-element a,
+.config-left-column .current-active-link a {
+  color: #2199e8;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 96, frontend.scss */
+.config-left-column .tab-id-element a:hover, .config-left-column .tab-id-element a:focus,
+.config-left-column .current-active-link a:hover,
+.config-left-column .current-active-link a:focus {
+  color: #1585cf;
+}
+/* line 102, frontend.scss */
+.config-left-column .current-active-link {
+  background: #e6e6e6;
+  display: block;
+  position: relative;
+  z-index: 50;
+}
+@media screen and (min-width: 64em) {
+  /* line 102, frontend.scss */
+  .config-left-column .current-active-link {
+    display: none;
+  }
+}
+
+/* line 113, frontend.scss */
+.config-right-column {
+  height: auto;
+}
+@media screen and (min-width: 64em) {
+  /* line 113, frontend.scss */
+  .config-right-column {
+    height: 350px;
+    width: 66.66667%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+@media screen and (min-width: 64em) and (min-width: 48em) {
+  /* line 113, frontend.scss */
+  .config-right-column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 82, scss/grid/_column.scss */
+  .config-right-column:last-child:not(:first-child) {
+    float: right;
+  }
+}
+/* line 120, frontend.scss */
+.config-right-column .tab-content-wrap {
+  background: #fefefe;
+  transition: all 0.5s ease;
+  border: 1px solid #e6e6e6;
+  border-top: 0;
+  border: 1px solid #e6e6e6;
+  border-left: 0;
+  border-left: 1px solid #e6e6e6;
+}
+@media screen and (min-width: 64em) {
+  /* line 120, frontend.scss */
+  .config-right-column .tab-content-wrap {
+    border-left: 0;
+    border-top: 1px solid #e6e6e6;
+  }
+}
+/* line 130, frontend.scss */
+.config-right-column .tab-content-wrap .tab-content-container {
+  height: auto;
+  display: none;
+  padding: 1rem;
+}
+@media screen and (min-width: 64em) {
+  /* line 130, frontend.scss */
+  .config-right-column .tab-content-wrap .tab-content-container {
+    height: 348px;
+  }
+}
+/* line 113, scss/components/_tabs.scss */
+.config-right-column .tab-content-wrap .tab-content-container.is-active {
+  display: block;
+}

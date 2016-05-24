@@ -1,3 +1,12 @@
+/*	  
+ *	Websnap Custom Tabs Wordpress Plugin
+ *	Author				: Rodrigo Hernando
+ *	URI						: https://github.com/rhernandog/wordpress-tab-plugin-html
+ *	Version				: 1.1.0
+ *	License				: MIT
+ *	File Type			: Backend HTML & CSS test SASS file
+ *	Dependencies	: jQuery 1.12.3
+ */
 /*
 -----------------------------------------------------------------------------------
 			IMPORTS
@@ -1476,7 +1485,7 @@ select[multiple] {
 			VARIABLES
 -----------------------------------------------------------------------------------
 */
-/* line 35, backend.scss */
+/* line 45, backend.scss */
 .main-container {
   padding: 15px 0;
   max-width: 75rem;
@@ -1492,7 +1501,7 @@ select[multiple] {
 .main-container::after {
   clear: both;
 }
-/* line 39, backend.scss */
+/* line 49, backend.scss */
 .main-container .inner-wrap {
   padding: 0 10px;
 }
@@ -1506,19 +1515,19 @@ select[multiple] {
   clear: both;
 }
 @media screen and (min-width: 48em) {
-  /* line 39, backend.scss */
+  /* line 49, backend.scss */
   .main-container .inner-wrap {
     padding: 0 15px;
   }
 }
-/* line 46, backend.scss */
+/* line 56, backend.scss */
 .main-container .inner-wrap > .config-left-column,
 .main-container .inner-wrap > .config-right-column {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 56, backend.scss */
+/* line 66, backend.scss */
 .inner-content {
   width: 100%;
   float: left;
@@ -1526,7 +1535,7 @@ select[multiple] {
   padding-right: 0.625rem;
 }
 @media screen and (min-width: 48em) {
-  /* line 56, backend.scss */
+  /* line 66, backend.scss */
   .inner-content {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1537,7 +1546,7 @@ select[multiple] {
   float: right;
 }
 
-/* line 60, backend.scss */
+/* line 70, backend.scss */
 .config-left-column,
 .config-right-column {
   width: 100%;
@@ -1546,7 +1555,7 @@ select[multiple] {
   padding-right: 0.625rem;
 }
 @media screen and (min-width: 48em) {
-  /* line 60, backend.scss */
+  /* line 70, backend.scss */
   .config-left-column,
   .config-right-column {
     padding-left: 0.9375rem;
@@ -1559,7 +1568,7 @@ select[multiple] {
   float: right;
 }
 
-/* line 65, backend.scss */
+/* line 75, backend.scss */
 .config-left-column {
   border: 1px solid #e6e6e6;
   height: 48px;
@@ -1567,7 +1576,7 @@ select[multiple] {
   transition: all 0.5s ease;
 }
 @media screen and (min-width: 64em) {
-  /* line 65, backend.scss */
+  /* line 75, backend.scss */
   .config-left-column {
     height: 350px;
     overflow-y: auto;
@@ -1578,7 +1587,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 64em) and (min-width: 48em) {
-  /* line 65, backend.scss */
+  /* line 75, backend.scss */
   .config-left-column {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1590,7 +1599,7 @@ select[multiple] {
     float: right;
   }
 }
-/* line 76, backend.scss */
+/* line 86, backend.scss */
 .config-left-column .tab-id-list {
   margin: 0;
   list-style-type: none;
@@ -1599,7 +1608,7 @@ select[multiple] {
   opacity: 0;
 }
 @media screen and (min-width: 64em) {
-  /* line 76, backend.scss */
+  /* line 86, backend.scss */
   .config-left-column .tab-id-list {
     margin-top: 0;
     min-height: 348px;
@@ -1623,7 +1632,7 @@ select[multiple] {
   float: none;
   display: block;
 }
-/* line 90, backend.scss */
+/* line 100, backend.scss */
 .config-left-column .tab-id-element,
 .config-left-column .current-active-link {
   float: left;
@@ -1648,7 +1657,7 @@ select[multiple] {
 .config-left-column .current-active-link > a[aria-selected='true'] {
   background: #e6e6e6;
 }
-/* line 96, backend.scss */
+/* line 106, backend.scss */
 .config-left-column .current-active-link {
   background: #e6e6e6;
   display: block;
@@ -1656,18 +1665,18 @@ select[multiple] {
   z-index: 50;
 }
 @media screen and (min-width: 64em) {
-  /* line 96, backend.scss */
+  /* line 106, backend.scss */
   .config-left-column .current-active-link {
     display: none;
   }
 }
 
-/* line 107, backend.scss */
+/* line 117, backend.scss */
 .config-right-column {
   height: auto;
 }
 @media screen and (min-width: 64em) {
-  /* line 107, backend.scss */
+  /* line 117, backend.scss */
   .config-right-column {
     height: 350px;
     width: 66.66667%;
@@ -1677,7 +1686,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 64em) and (min-width: 48em) {
-  /* line 107, backend.scss */
+  /* line 117, backend.scss */
   .config-right-column {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1689,7 +1698,7 @@ select[multiple] {
     float: right;
   }
 }
-/* line 114, backend.scss */
+/* line 124, backend.scss */
 .config-right-column .tab-content-wrap {
   background: #fefefe;
   transition: all 0.5s ease;
@@ -1700,20 +1709,20 @@ select[multiple] {
   border-left: 1px solid #e6e6e6;
 }
 @media screen and (min-width: 64em) {
-  /* line 114, backend.scss */
+  /* line 124, backend.scss */
   .config-right-column .tab-content-wrap {
     border-left: 0;
     border-top: 1px solid #e6e6e6;
   }
 }
-/* line 124, backend.scss */
+/* line 134, backend.scss */
 .config-right-column .tab-content-wrap .tab-content-container {
   height: auto;
   display: none;
   padding: 1rem;
 }
 @media screen and (min-width: 64em) {
-  /* line 124, backend.scss */
+  /* line 134, backend.scss */
   .config-right-column .tab-content-wrap .tab-content-container {
     height: 348px;
   }
@@ -1722,7 +1731,7 @@ select[multiple] {
 .config-right-column .tab-content-wrap .tab-content-container.is-active {
   display: block;
 }
-/* line 132, backend.scss */
+/* line 142, backend.scss */
 .config-right-column .tab-content-wrap .tab-container-settings {
   max-width: 75rem;
   margin-left: auto;
@@ -1740,7 +1749,7 @@ select[multiple] {
 .config-right-column .tab-content-wrap .tab-container-settings::after {
   clear: both;
 }
-/* line 139, backend.scss */
+/* line 149, backend.scss */
 .config-right-column .tab-content-wrap .tab-settings-col {
   width: 100%;
   float: left;
@@ -1748,7 +1757,7 @@ select[multiple] {
   padding-right: 0.625rem;
 }
 @media screen and (min-width: 48em) {
-  /* line 139, backend.scss */
+  /* line 149, backend.scss */
   .config-right-column .tab-content-wrap .tab-settings-col {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1758,7 +1767,7 @@ select[multiple] {
 .config-right-column .tab-content-wrap .tab-settings-col:last-child:not(:first-child) {
   float: right;
 }
-/* line 142, backend.scss */
+/* line 152, backend.scss */
 .config-right-column .tab-content-wrap .tab-settings-col .tab-name-label {
   background-color: #0074a2;
   color: #fff;
@@ -1769,13 +1778,13 @@ select[multiple] {
   padding: 3px 10px;
 }
 @media screen and (max-width: 782px) {
-  /* line 142, backend.scss */
+  /* line 152, backend.scss */
   .config-right-column .tab-content-wrap .tab-settings-col .tab-name-label {
     padding: 8px 10px;
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 157, backend.scss */
+  /* line 167, backend.scss */
   .config-right-column .tab-content-wrap .left-setting {
     width: 33.33333%;
     float: left;
@@ -1784,7 +1793,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 75em) and (min-width: 48em) {
-  /* line 157, backend.scss */
+  /* line 167, backend.scss */
   .config-right-column .tab-content-wrap .left-setting {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1797,7 +1806,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 163, backend.scss */
+  /* line 173, backend.scss */
   .config-right-column .tab-content-wrap .right-setting {
     width: 66.66667%;
     float: left;
@@ -1806,7 +1815,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 75em) and (min-width: 48em) {
-  /* line 163, backend.scss */
+  /* line 173, backend.scss */
   .config-right-column .tab-content-wrap .right-setting {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1819,7 +1828,7 @@ select[multiple] {
   }
 }
 
-/* line 172, backend.scss */
+/* line 182, backend.scss */
 .tab-update-btn-wrap {
   max-width: 75rem;
   margin-left: auto;
@@ -1835,7 +1844,7 @@ select[multiple] {
 .tab-update-btn-wrap::after {
   clear: both;
 }
-/* line 176, backend.scss */
+/* line 186, backend.scss */
 .tab-update-btn-wrap .buttons-container,
 .tab-update-btn-wrap .post-selector-container {
   width: 100%;
@@ -1844,7 +1853,7 @@ select[multiple] {
   padding-right: 0.625rem;
 }
 @media screen and (min-width: 48em) {
-  /* line 176, backend.scss */
+  /* line 186, backend.scss */
   .tab-update-btn-wrap .buttons-container,
   .tab-update-btn-wrap .post-selector-container {
     padding-left: 0.9375rem;
@@ -1857,7 +1866,7 @@ select[multiple] {
   float: right;
 }
 @media screen and (min-width: 75em) {
-  /* line 181, backend.scss */
+  /* line 191, backend.scss */
   .tab-update-btn-wrap .buttons-container {
     width: 33.33333%;
     float: left;
@@ -1867,7 +1876,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 75em) and (min-width: 48em) {
-  /* line 181, backend.scss */
+  /* line 191, backend.scss */
   .tab-update-btn-wrap .buttons-container {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1880,7 +1889,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 188, backend.scss */
+  /* line 198, backend.scss */
   .tab-update-btn-wrap .post-selector-container {
     width: 66.66667%;
     float: left;
@@ -1889,7 +1898,7 @@ select[multiple] {
   }
 }
 @media screen and (min-width: 75em) and (min-width: 48em) {
-  /* line 188, backend.scss */
+  /* line 198, backend.scss */
   .tab-update-btn-wrap .post-selector-container {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1902,23 +1911,23 @@ select[multiple] {
   }
 }
 
-/* line 196, backend.scss */
+/* line 206, backend.scss */
 .delete-button {
   background-color: #dc3232;
   color: #fefefe;
 }
-/* line 199, backend.scss */
+/* line 209, backend.scss */
 .delete-button:active, .delete-button:hover, .delete-button:focus {
   background-color: #bb2020;
 }
 
-/* line 206, backend.scss */
+/* line 216, backend.scss */
 .tab-editor-wrap,
 .delete-tab-btn-wrap {
   padding-top: 10px;
 }
 
-/* line 211, backend.scss */
+/* line 221, backend.scss */
 .input-group-label.help-icon {
   cursor: pointer;
 }

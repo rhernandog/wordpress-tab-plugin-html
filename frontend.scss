@@ -4,9 +4,11 @@
  *	URI						: https://github.com/rhernandog/wordpress-tab-plugin-html
  *	Version				: 1.1.0
  *	License				: MIT
- *	File Type			: Backend HTML & CSS test SASS file
+ *	File Type			: Frontend HTML & CSS test SASS file
  *	Dependencies	: jQuery 1.12.3
  */
+
+
 
 /*
 -----------------------------------------------------------------------------------
@@ -17,30 +19,7 @@
 @import 'scss/foundation';
 
 @include foundation-global-styles();
-@include foundation-typography;
-@include foundation-forms;
-@include foundation-button;
-
-
-
-
-
-/*
------------------------------------------------------------------------------------
-			VARIABLES
------------------------------------------------------------------------------------
-*/
-$delete-btn-background: #dc3232;
-$delete-btn-background-hover: darken($delete-btn-background, 10%);
-
-
-
-
-
-
-// p {
-// 	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// }
+// @include foundation-typography;
 
 .main-container {
 	padding: 15px 0;
@@ -95,12 +74,29 @@ $delete-btn-background-hover: darken($delete-btn-background, 10%);
 		@include tabs-container-vertical;
 		margin-top: -48px;
 		opacity: 0;
+		padding: 0;
 	}
 
 	.tab-id-element,
 	.current-active-link {
 		@include tabs-title;
 		float: none;
+	}
+
+	.tab-id-element a {
+		line-height: inherit;
+	}
+
+	.tab-id-element a,
+	.current-active-link a {
+		color: #2199e8;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			color: #1585cf;
+		}
 	}
 
 	.current-active-link {
@@ -138,87 +134,5 @@ $delete-btn-background-hover: darken($delete-btn-background, 10%);
 			}
 			@include tabs-panel;
 		}
-
-		.tab-container-settings {
-			@include grid-row;
-			margin-bottom: 3px;
-			padding-bottom: 3px;
-			border-bottom: 1px solid $medium-gray;
-		}
-
-		.tab-settings-col {
-			@include grid-column(12);
-
-			.tab-name-label {
-				background-color: #0074a2;
-				color: #fff;
-				border: 1px solid $medium-gray;
-				border-right: none;
-				font-size: 14px;
-				margin-right: -1px;
-				padding: 3px 10px;
-
-				@media screen and (max-width: 782px) {
-					padding: 8px 10px;
-				}
-			}
-		}// tab settings col end
-
-		.left-setting {
-			@include breakpoint(xlarge) {
-				@include grid-column(4);
-			}
-		}
-
-		.right-setting {
-			@include breakpoint(xlarge) {
-				@include grid-column(8);
-			}
-		}
 	}
 }// config-right-column end
-
-// update buttons wrap
-.tab-update-btn-wrap {
-	@include grid-row;
-	border-bottom: 1px solid $medium-gray;
-
-	.buttons-container,
-	.post-selector-container {
-		@include grid-column(12);
-	}
-
-	.buttons-container {
-		@include breakpoint(xlarge) {
-			@include grid-column(4);
-			margin-top: 25px;
-		}
-	}
-
-	.post-selector-container {
-		@include breakpoint(xlarge) {
-			@include grid-column(8);
-		}
-	}
-}// update button wrap end
-
-// delete button - use button mixin
-.delete-button {
-	background-color: $delete-btn-background;
-	color: $white;
-	&:active,
-	&:hover,
-	&:focus {
-		background-color: $delete-btn-background-hover;
-	}
-}
-
-.tab-editor-wrap,
-.delete-tab-btn-wrap {
-	padding-top: 10px;
-}
-
-.input-group-label.help-icon,
-.input-group-label.collapse-icon {
-	cursor: pointer;
-}

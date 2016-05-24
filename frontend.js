@@ -4,10 +4,9 @@
  *	URI						: https://github.com/rhernandog/wordpress-tab-plugin-html
  *	Version				: 1.1.0
  *	License				: MIT
- *	File Type			: Backend HTML & CSS test Javascript file
+ *	File Type			: Frontend HTML & CSS test Javascript file
  *	Dependencies	: jQuery 1.12.3
  */
-
 
 (function($){$(function(){
 
@@ -166,6 +165,5 @@
 		currentContainer = target;
 
 	}// toggle target class end
-
 
 });}(jQuery));
