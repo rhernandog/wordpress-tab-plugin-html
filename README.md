@@ -1,4 +1,6 @@
 # Custom Wordpress Tab plugin html samples
+
+[![Join the chat at https://gitter.im/rhernandog/wordpress-custom-tabs-gitlab](https://badges.gitter.im/rhernandog/wordpress-custom-tabs-gitlab.svg)](https://gitter.im/rhernandog/wordpress-custom-tabs-gitlab?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![npm](https://img.shields.io/badge/npm-1.1.0-blue.svg?style=plastic&maxAge=2592000)](https://www.npmjs.com/package/wordpress-tab-plugin-html-test)
 
 HTML and CSS tests for the front and back end of my custom wordpress tabs plugin
